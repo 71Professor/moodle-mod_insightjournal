@@ -326,8 +326,7 @@ and is easy to omit locally without noticing).
 
 ## Development Status
 
-Stable (`MATURITY_STABLE`), released as 1.0.0. One item remains open,
-tracked separately from the version bump:
+Stable (`MATURITY_STABLE`), released as 1.0.0.
 
 - [x] Run PHPStan in a full Moodle checkout (level 5, clean) — 2026-07-07
 - [x] Add Behat tests (24 scenarios: save/reload roundtrip, editing a saved
@@ -351,7 +350,10 @@ tracked separately from the version bump:
 - [x] Add screenshots for the Plugin Directory — uploaded to the Moodle
       Marketplace listing, passed automated tests and review, approval
       pending — 2026-08-09
-- [ ] Decide whether a dedicated moderation/entry-management capability is needed
+- [x] Decide whether a dedicated moderation/entry-management capability is
+      needed — decided against: only the entry's own author may ever edit
+      or delete it, with no override for any role, matching the existing
+      privacy model described under [Data and Privacy](#data-and-privacy) — 2026-08-09
 
 ---
 
