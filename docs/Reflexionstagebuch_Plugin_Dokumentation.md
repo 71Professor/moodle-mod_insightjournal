@@ -1,6 +1,6 @@
 # mod_insightjournal – Insight Journal für Moodle
 
-## **1 Moodle Activity Module · Version 0.9.0-beta · August 2026**
+## **1 Moodle Activity Module · Version 1.0.0 · August 2026**
 
 > **Zweck:** Trainer/innen legen pro Kursabschnitt eine Insight-Journal-Aktivität mit einer gezielten Aufgabe oder Frage an. Lernende schreiben ihre Antwort direkt in Moodle, können sie jederzeit überarbeiten und am Kursende eine persönliche Gesamtübersicht drucken. Jede/r Lernende entscheidet selbst, pro Eintrag, ob Trainer/innen ihn sehen dürfen. Trainer/innen behalten den kursweiten Fortschritt im Blick und können exportieren, sehen dabei aber nur die Einträge, die die Verfassenden freigegeben haben.
 
@@ -60,7 +60,7 @@ Nach Änderungen an Sprachstrings, Templates oder JavaScript: **Cache bereinigen
 | Moodle-Kompatibilität  | Moodle 4.5+ (`requires = 2024100700`)            |
 | PHP-Anforderung        | PHP 8.1+                                         |
 | Externe Abhängigkeiten | Keine (kein Composer, kein Node.js zur Laufzeit) |
-| Reifegrad              | Beta (`MATURITY_BETA`)                           |
+| Reifegrad              | Stable (`MATURITY_STABLE`)                       |
 
 ### 3.3  Rechte prüfen
 
@@ -216,7 +216,7 @@ Seite oder Spalte auszublenden.
 
 ---
 
-## 9  Bekannte Einschränkungen (Beta)
+## 9  Bekannte Einschränkungen
 
 - **Keine native Moodle-App-Unterstützung:** Es gibt kein `db/mobile.php`. Die Aktivität ist in der Moodle-App über die responsive Webansicht nutzbar; eine native App-Integration ist für eine spätere Version geplant.
 - **Kein Server-seitiger PDF-Export:** Die Druckfunktion nutzt den Browserdruckdialog. Ein direkter PDF-Download ist für eine spätere Version geplant.
@@ -228,7 +228,7 @@ Seite oder Spalte auszublenden.
 
 ## 10  Feedback & Kontakt
 
-Diese Version wird an ausgewählte Personen aus dem Bildungsbereich und der Moodle-Community zur Rückmeldung verteilt. Jedes Feedback ist willkommen – ob als Entwickler/in oder als Lehrende/r.
+Jedes Feedback ist willkommen – ob als Entwickler/in oder als Lehrende/r.
 
 **Was besonders interessiert:**
 
@@ -244,4 +244,4 @@ Diese Version wird an ausgewählte Personen aus dem Bildungsbereich und der Mood
 
 ---
 
-*Erstellt: Juli 2026 · Aktualisiert: August 2026 · Plugin: mod_insightjournal v0.9.0-beta*
+*Erstellt: Juli 2026 · Aktualisiert: August 2026 · Plugin: mod_insightjournal v1.0.0*

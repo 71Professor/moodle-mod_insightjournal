@@ -8,6 +8,8 @@ Versions map to the `$plugin->release` value in `version.php`.
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-08-09
+
 ### Changed
 
 - **`amd/src/autosave.js` and `amd/src/summary.js` are now native ESM modules**
@@ -799,7 +801,8 @@ maturity `MATURITY_BETA`.
   included; restore maps user IDs and skips entries for unavailable users.
 - English and German language packs.
 
-[Unreleased]: https://github.com/71Professor/moodle-mod_insightjournal/compare/v0.9.0-beta...HEAD
+[Unreleased]: https://github.com/71Professor/moodle-mod_insightjournal/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/71Professor/moodle-mod_insightjournal/compare/v0.9.0-beta...v1.0.0
 [0.9.0-beta]: https://github.com/71Professor/moodle-mod_insightjournal/compare/v0.8.0-beta...v0.9.0-beta
 [0.8.0-beta]: https://github.com/71Professor/moodle-mod_insightjournal/compare/v0.7.1-beta...v0.8.0-beta
 [0.7.1-beta]: https://github.com/71Professor/moodle-mod_insightjournal/compare/v0.7.0-beta...v0.7.1-beta

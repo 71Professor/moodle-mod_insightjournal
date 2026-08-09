@@ -2,7 +2,7 @@
 
 [![Moodle Plugin CI](https://github.com/71Professor/moodle-mod_insightjournal/actions/workflows/ci.yml/badge.svg)](https://github.com/71Professor/moodle-mod_insightjournal/actions/workflows/ci.yml)
 
-**Version 0.9.0-beta · August 2026 · Moodle 4.5+**
+**Version 1.0.0 · August 2026 · Moodle 4.5+**
 
 `mod_insightjournal` is a Moodle activity module for focused reflection tasks and
 questions. Each activity holds one task or question. Learners write and save their
@@ -11,8 +11,8 @@ all their journal entries across the course. Each learner decides for themselves
 per entry, whether trainers may see it. Trainers track course-wide progress and
 can export to CSV, but only ever see the entries their authors chose to share.
 
-> **This is a beta release** distributed to a small group of educators and Moodle
-> developers for feedback. See the [Feedback](#feedback) section below.
+> **Version 1.0.0 — first stable release.** Feedback from educators and Moodle
+> developers is still very welcome — see the [Feedback](#feedback) section below.
 
 A detailed German user guide is available at
 [`docs/Reflexionstagebuch_Plugin_Dokumentation.md`](docs/Reflexionstagebuch_Plugin_Dokumentation.md).
@@ -134,7 +134,7 @@ The course-wide report (`coursereport.php`) evaluates `mod/insightjournal:submit
 once at course context to decide who appears as a participant row at all;
 overriding it at a specific activity's own module context changes whether
 that one activity's cell is writable, but not the participant list itself
-— see [Known Limitations](#known-limitations-beta).
+— see [Known Limitations](#known-limitations).
 
 ---
 
@@ -243,9 +243,11 @@ clean at level 5 with every finding resolved at its source rather than
 suppressed (one remaining case, `moodleform_mod::standard_intro_elements()`'s
 `$customlabel` docblock being wrong in Moodle core itself, is handled with a
 narrowly-scoped, explained `@phpstan-ignore-next-line` comment at that one
-call site). A separate, non-blocking `phpstan-tests.neon` also analyses
-`tests/` in CI for visibility, without gating the build on its (currently
-unresolvable PHPUnit/Moodle test-framework) findings.
+call site). A second config, `phpstan-tests.neon`, analyses two files under
+`tests/` (this plugin's own PHPUnit generator and Behat step definitions —
+the rest of `tests/` isn't statically analysable without PHPUnit's own
+bootstrap) and gates the build the same way the production step does; there
+is no continue-on-error here.
 
 Behat scenarios are in `tests/behat/insight_journal.feature` and cover a
 plain form submit with no JavaScript, a no-JavaScript save conflict
@@ -267,7 +269,7 @@ and is easy to omit locally without noticing).
 
 ---
 
-## Known Limitations (Beta)
+## Known Limitations
 
 - **No native Moodle Mobile App addon** (`db/mobile.php` is not provided). The
   activity is usable in the app via its responsive web view; native in-app editing
@@ -324,8 +326,8 @@ and is easy to omit locally without noticing).
 
 ## Development Status
 
-Beta (`MATURITY_BETA`). The plugin is feature-complete for the core workflow.
-Outstanding work before a stable release:
+Stable (`MATURITY_STABLE`), released as 1.0.0. Two items remain open,
+tracked separately from the version bump:
 
 - [x] Run PHPStan in a full Moodle checkout (level 5, clean) — 2026-07-07
 - [x] Add Behat tests (24 scenarios: save/reload roundtrip, editing a saved
@@ -353,7 +355,6 @@ Outstanding work before a stable release:
 
 ## Feedback
 
-This beta is distributed to a small group of educators and Moodle developers.
 All feedback is welcome — whether you are evaluating it as a developer or as a trainer.
 
 **Particularly interested in:**
