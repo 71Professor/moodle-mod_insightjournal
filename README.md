@@ -326,7 +326,7 @@ and is easy to omit locally without noticing).
 
 ## Development Status
 
-Stable (`MATURITY_STABLE`), released as 1.0.0. Two items remain open,
+Stable (`MATURITY_STABLE`), released as 1.0.0. One item remains open,
 tracked separately from the version bump:
 
 - [x] Run PHPStan in a full Moodle checkout (level 5, clean) — 2026-07-07
@@ -348,7 +348,9 @@ tracked separately from the version bump:
       2026-07-28, 2026-07-29, 2026-07-31, 2026-08-03, 2026-08-04, 2026-08-06
 - [x] Execute the PHPUnit suite (moodle-docker, Moodle 5.0.8) — 2026-07-07
 - [x] Verify on Moodle 4.5 and 5.x (tested on 4.5 and 5.0.2)
-- [ ] Add screenshots for the Plugin Directory
+- [x] Add screenshots for the Plugin Directory — uploaded to the Moodle
+      Marketplace listing, passed automated tests and review, approval
+      pending — 2026-08-09
 - [ ] Decide whether a dedicated moderation/entry-management capability is needed
 
 ---
